@@ -39,7 +39,6 @@ module Game
      | turn 02                                     |
      | turn 01                                     |'
 
-  # test 3
   class Mastermind
     attr_reader :mode, :secret_colors, :ai_intelligence
 
@@ -96,7 +95,6 @@ module Game
       end
     end
 
-    # test
     class Display
       def self.status(sec_col, guess)
         a = []
@@ -168,7 +166,6 @@ module Game
     end
   end
 
-  # test
   class Error
     def self.char_count_err(guess)
       puts "You input #{guess.length} characters (requires five)"
@@ -188,7 +185,6 @@ module Game
     end
   end
 
-  # test
   class UserMode
     def self.intro
       puts USERMODE_INTR0,
@@ -218,7 +214,6 @@ module Game
     end
   end
 
-  # test
   class CompMode
     def self.intro
       puts COMPMODE_INTRO,
@@ -306,7 +301,6 @@ module Game
   end
 end
 
-# testing 1
 class User
   include Game
   attr_reader :game_won, :guess_count
@@ -326,7 +320,6 @@ class User
   end
 end
 
-# testing 2
 class Comp < Game::CompMode
   include Game
   attr_reader :game_won, :guess_count
